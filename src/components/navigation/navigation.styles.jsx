@@ -1,5 +1,18 @@
-import styled from 'styled-components';
-import { neutralColors, primaryColors } from '../../constants/styles';
+import styled, { keyframes } from 'styled-components';
+import { neutralColors } from '../../constants/styles';
+
+const backgroundIn = keyframes`
+0% {
+    scale: 0 0.005;
+  }
+  33% {
+    scale: 1 0.005;
+  }
+  66%,
+  100% {
+    scale: 1 1;
+  }
+`;
 
 export const Nav = styled.nav`
   display: flex;
@@ -7,24 +20,25 @@ export const Nav = styled.nav`
   align-items: center;
 `;
 
-// export const Menu = styled.menu`
-//   height: 100vh;
-//   width: 100vw;
-//   background-color: hsl(236, 13%, 42%, 0.2);
-//   display: flex;
-//   justify-content: end;
-// `;
-// export const Overlay = styled.div`
-//   position: absolute;
-//   height: 100vh;
-//   width: 100vw;
-//   background-color: hsl(236, 13%, 42%);
-//   opacity: 0.4;
-// `;
+export const Overlay = styled.div`
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
+  position: absolute;
+  top: 0;
+  right: ${(props) => (props.isOpen ? '0' : '-100%')};
+  height: 100vh;
+  width: 100vw;
+  background-color: hsl(236, 13%, 42%);
+  opacity: 0.4;
+  animation: ${backgroundIn} 2s;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
 export const LinkMenu = styled.div`
   position: fixed;
   top: 0;
-  right: ${(props) => (props.isOpen ? '0' : '-300px')};
+  right: ${(props) => (props.isOpen ? '0' : '-100%')};
   display: flex;
   flex-direction: column;
   justify-content: center;
