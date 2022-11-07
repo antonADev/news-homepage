@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+.App > *:not(nav) {
+  margin: 0 0 3rem 0;
+}

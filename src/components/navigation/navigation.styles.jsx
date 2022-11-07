@@ -18,7 +18,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0;
+  padding: 0.3rem 0 1rem 0;
 `;
 
 export const Overlay = styled.div`
@@ -42,7 +42,7 @@ export const LinkMenu = styled.div`
   right: ${(props) => (props.isOpen ? '0' : '-100%')};
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100vh;
   width: 70%;
   background-color: ${neutralColors.offWhite};
