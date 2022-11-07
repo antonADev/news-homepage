@@ -48,16 +48,21 @@ export const LinkMenu = styled.div`
   background-color: ${neutralColors.offWhite};
   transition: all 1s;
 
-  * > li {
+  li {
     list-style: none;
     margin: 0.8rem 2rem;
+    a {
+      font-size: 1.1rem;
+      text-decoration: none;
+      color: ${neutralColors.veryDarkBlue};
+    }
   }
 
-  * > li a {
+  /* * > li a {
     font-size: 1.1rem;
     text-decoration: none;
     color: ${neutralColors.veryDarkBlue};
-  }
+  } */
 
   ul {
     position: absolute;
@@ -77,6 +82,10 @@ export const LinkMenu = styled.div`
       display: flex;
       flex-direction: row;
       padding-top: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
     }
   }
 `;

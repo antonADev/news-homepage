@@ -1,20 +1,56 @@
 import styled from 'styled-components';
 import { primaryColors, neutralColors } from '../../constants/styles';
+import { device } from '../../constants/device';
 
 export const HeroWrapper = styled.div`
-  /* max-width: 100vw;
-  display: flex;
-  flex-direction: column;
+  max-width: 100vw;
+
+  /*
   gap: 1.1rem; */
-  & > *:not(p) {
+  /* & > *:not(p) {
     margin: 1.2rem 0;
+  } */
+
+  @media ${device.tablet} {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+`;
+
+export const HeroTextWrapper = styled.div`
+  @media ${device.tablet} {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; */
+    margin-top: 1.5rem;
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'header content';
+    gap: 2rem;
+    height: 100%;
+    align-items: center;
   }
 `;
 
 export const HeroHeader = styled.h1`
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 3.3rem);
   line-height: 1;
+`;
+
+export const HeroContentContainer = styled.div`
+  @media ${device.tablet} {
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 `;
 
 export const HeroPara = styled.p`
