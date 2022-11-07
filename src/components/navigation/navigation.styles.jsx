@@ -18,6 +18,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.8rem 0;
 `;
 
 export const Overlay = styled.div`
@@ -27,7 +28,7 @@ export const Overlay = styled.div`
   right: ${(props) => (props.isOpen ? '0' : '-100%')};
   height: 100vh;
   width: 100vw;
-  background-color: hsl(236, 13%, 42%);
+  background-color: ${neutralColors.veryDarkBlue};
   opacity: 0.4;
   animation: ${backgroundIn} 2s;
 

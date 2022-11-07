@@ -3,14 +3,7 @@ import { ReactComponent as BrandLogo } from '../../assets/images/logo.svg';
 import { ReactComponent as MenuIcon } from '../../assets/images/icon-menu.svg';
 import { ReactComponent as Close } from '../../assets/images/icon-menu-close.svg';
 
-import {
-  Menu,
-  Nav,
-  LinkMenu,
-  Overlay,
-  IconWrapper,
-  BrandWrapper,
-} from './navigation.styles';
+import { Nav, LinkMenu, Overlay, IconWrapper } from './navigation.styles';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
