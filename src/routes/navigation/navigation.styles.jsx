@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { deviceMin } from '../../constants/device';
 import { neutralColors, primaryColors } from '../../constants/styles';
 
-import { ReactComponent as BrandLogo } from '../../assets/images/logo.svg';
-
 const backgroundIn = keyframes`
 0% {
     scale: 0 0.005;
