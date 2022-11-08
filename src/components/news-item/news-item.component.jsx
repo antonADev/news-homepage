@@ -1,19 +1,16 @@
 import React from 'react';
 import {
   NewsDetailsWrapper,
-  NewsDetailWrapper,
   NewsDetailHeader,
   NewsDetailPara,
 } from './news.item.styles';
 
 const NewsItem = (props) => {
-  const { title, content } = props;
+  const { title, content, url } = props;
   return (
-    <NewsDetailsWrapper>
-      {/* <NewsDetailWrapper> */}
+    <NewsDetailsWrapper to={url}>
       <NewsDetailHeader>{title}</NewsDetailHeader>
       <NewsDetailPara>{content}</NewsDetailPara>
-      {/* </NewsDetailWrapper> */}
     </NewsDetailsWrapper>
   );
 };

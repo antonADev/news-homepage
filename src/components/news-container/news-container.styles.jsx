@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 import { primaryColors, neutralColors } from '../../constants/styles';
 
-import { device } from '../../constants/device';
-// NewsWrapper,
-//   NewsHeader,
-//   NewsDetailWrapper,
-//   NewsDetailHeader,
-//   NewsDetailPara,
+import { deviceMin } from '../../constants/device';
 
 export const NewsWrapper = styled.div`
   background-color: ${neutralColors.veryDarkBlue};
-  padding: 1.5rem 1.3rem 0 1.3rem;
-  & > div:not(:last-child) {
+  padding: 1.9rem 1.3rem 0 1.3rem;
+  & > a:not(:last-child) {
     border-bottom: 1px solid ${neutralColors.darkGrayishBlue};
   }
 
-  @media ${device.tablet} {
+  @media ${deviceMin.laptop} {
     grid-area: news;
     height: 100%;
   }
@@ -23,5 +18,5 @@ export const NewsWrapper = styled.div`
 
 export const NewsHeader = styled.h2`
   color: ${primaryColors.softOrange};
-  font-size: 2rem;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 2.5rem);
 `;

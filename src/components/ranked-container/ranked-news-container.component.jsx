@@ -13,18 +13,21 @@ const newsData = [
     title: 'Reviving Retro PCs',
     content: `What happens when old PCs are given modern upgrades?`,
     imageUrl: firstImage,
+    url: '/',
   },
   {
     id: 2,
     title: 'Top 10 Laptops of 2022',
     content: `Our best picks for various needs and budgets`,
     imageUrl: secondImage,
+    url: '/',
   },
   {
     id: 3,
     title: 'The Growth of Gaming',
     content: `How the pandemic has sparked fresh opportunities`,
     imageUrl: thirdImage,
+    url: '/',
   },
 ];
 
@@ -38,6 +41,7 @@ const RankedNews = () => {
           title={news.title}
           content={news.content}
           imageUrl={news.imageUrl}
+          url={news.url}
         />
       ))}
     </RankedNewsWrapper>

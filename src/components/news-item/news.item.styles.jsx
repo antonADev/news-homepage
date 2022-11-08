@@ -1,14 +1,19 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { neutralColors } from '../../constants/styles';
+import { neutralColors, primaryColors } from '../../constants/styles';
 
-export const NewsDetailsWrapper = styled.div`
+export const NewsDetailsWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 1.7rem 0;
+  text-decoration: none;
+  :hover {
+    h3 {
+      color: ${primaryColors.softOrange};
+    }
+  }
 `;
-
-export const NewsDetailWrapper = styled.div``;
 
 export const NewsDetailHeader = styled.h3`
   color: ${neutralColors.offWhite};

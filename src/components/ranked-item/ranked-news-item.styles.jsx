@@ -1,15 +1,24 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { primaryColors, neutralColors } from '../../constants/styles';
 
 // RankedItemWrapper, RankedItemImgContainer, Image, RankedItemTextContainer, NumberTitle, RankedItemHeader, RankedItemPara
 
-export const RankedItemWrapper = styled.div`
+export const RankedItemWrapper = styled(Link)`
   display: flex;
   gap: 1.5rem;
+  text-decoration: none;
+
+  :hover {
+    h3 {
+      color: ${primaryColors.softRed};
+    }
+  }
 `;
 
 export const RankedItemImgContainer = styled.div`
-  max-width: 6rem;
+  max-width: 6.2rem;
+  max-height: 8rem;
 `;
 
 export const Image = styled.img`
@@ -20,7 +29,7 @@ export const Image = styled.img`
 export const RankedItemTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 export const NumberTitle = styled.p`
@@ -34,5 +43,5 @@ export const RankedItemHeader = styled.h3`
 `;
 
 export const RankedItemPara = styled.p`
-  line-height: 1.8;
+  line-height: 1.7;
 `;

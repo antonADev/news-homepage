@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { primaryColors, neutralColors } from '../../constants/styles';
-import { device } from '../../constants/device';
+import { deviceMax, deviceMin } from '../../constants/device';
 
 export const HeroWrapper = styled.div`
   max-width: 100vw;
@@ -11,7 +11,7 @@ export const HeroWrapper = styled.div`
     margin: 1.2rem 0;
   } */
 
-  @media ${device.tablet} {
+  @media ${deviceMin.laptop} {
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -21,12 +21,8 @@ export const HeroWrapper = styled.div`
 `;
 
 export const HeroTextWrapper = styled.div`
-  @media ${device.tablet} {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; */
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
+  @media ${deviceMin.laptop} {
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 'header content';
@@ -43,7 +39,13 @@ export const HeroHeader = styled.h1`
 `;
 
 export const HeroContentContainer = styled.div`
-  @media ${device.tablet} {
+  @media ${deviceMax.laptop} {
+    & > * {
+      margin: 1rem 0;
+    }
+  }
+
+  @media ${deviceMin.laptop} {
     height: 100%;
     display: flex;
 
@@ -67,4 +69,9 @@ export const HeroButton = styled.button`
   letter-spacing: 0.3rem;
   padding: 1rem 2rem;
   text-align: center;
+  cursor: pointer;
+  :hover {
+    background-color: ${neutralColors.veryDarkBlue};
+    transition: 0.4s;
+  }
 `;
