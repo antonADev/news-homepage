@@ -14,7 +14,7 @@ const RankedItem = (props) => {
   return (
     <RankedItemWrapper>
       <RankedItemImgContainer>
-        <Image src={imageUrl} />
+        <Image src={imageUrl} alt={`${title}-image`} />
       </RankedItemImgContainer>
       <RankedItemTextContainer>
         <NumberTitle>{id < 10 ? `0${id}` : id}</NumberTitle>

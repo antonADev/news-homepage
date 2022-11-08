@@ -23,7 +23,7 @@ const Navigation = () => {
     <>
       <Overlay isOpen={isOpen} />
       <Nav>
-        <LinkLogo to='/'>
+        <LinkLogo to='/' aria-label='logo-home-link'>
           <LogoComponent />
         </LinkLogo>
 
