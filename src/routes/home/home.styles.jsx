@@ -10,7 +10,7 @@ export const Main = styled.main`
   @media ${deviceMin.laptop} {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 510px 180px;
+    grid-template-rows: 500px 180px;
     gap: 2rem;
     row-gap: 4.5rem;
     grid-template-areas:
