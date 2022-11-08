@@ -22,8 +22,10 @@ export const RankedItemImgContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 130px;
+  width: auto;
+  max-width: 100px;
 `;
 
 export const RankedItemTextContainer = styled.div`
