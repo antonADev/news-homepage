@@ -11,11 +11,11 @@ import {
   LinkMenu,
   UnorderedLi,
   ListItem,
-  Overlay,
   IconWrapper,
 } from './navigation.styles';
 
 import LogoComponent from '../../components/logo/logo.component';
+import Overlay from '../../components/overlay /overlay.component';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

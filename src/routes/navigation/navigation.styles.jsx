@@ -3,19 +3,6 @@ import { Link } from 'react-router-dom';
 import { deviceMin } from '../../constants/device';
 import { neutralColors, primaryColors } from '../../constants/styles';
 
-const backgroundIn = keyframes`
-0% {
-    scale: 0 0.005;
-  }
-  33% {
-    scale: 1 0.005;
-  }
-  66%,
-  100% {
-    scale: 1 1;
-  }
-`;
-
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -24,22 +11,6 @@ export const Nav = styled.nav`
 
   @media ${deviceMin.laptop} {
     padding: 3rem 0 2.7rem;
-  }
-`;
-
-export const Overlay = styled.div`
-  display: ${(props) => (props.isOpen ? 'block' : 'none')};
-  position: absolute;
-  top: 0;
-  right: ${(props) => (props.isOpen ? '0' : '-100%')};
-  height: 100vh;
-  width: 100vw;
-  background-color: ${neutralColors.veryDarkBlue};
-  opacity: 0.4;
-  animation: ${backgroundIn} 2s;
-
-  @media ${deviceMin.laptop} {
-    display: none;
   }
 `;
 
