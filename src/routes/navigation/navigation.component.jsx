@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import { ReactComponent as MenuIcon } from '../../assets/images/icon-menu.svg';
 import { ReactComponent as Close } from '../../assets/images/icon-menu-close.svg';
+import Overlay from '../../components/overlay/overlay.component';
 
 import {
   Nav,
@@ -11,7 +12,6 @@ import {
   LinkMenu,
   UnorderedLi,
   ListItem,
-  Overlay,
   IconWrapper,
 } from './navigation.styles';
 
